@@ -2,30 +2,28 @@
 // MFSS-specific interactions: event filter, newsletter form, back-to-top.
 // Vanilla JS only. No external dependencies.
 
-(function () {
-  'use strict';
-
+(() => {
   // T12: Event filter — show/hide event cards by category
   function initEventFilter() {
-    var buttons = document.querySelectorAll('.mfss-filter-btn');
-    var cards = document.querySelectorAll('.mfss-event');
+    const buttons = document.querySelectorAll('.mfss-filter-btn');
+    const cards = document.querySelectorAll('.mfss-event');
     if (!buttons.length || !cards.length) return;
 
-    buttons.forEach(function (btn) {
+    buttons.forEach((btn) => {
       btn.setAttribute('aria-pressed', btn.classList.contains('is-active') ? 'true' : 'false');
 
-      btn.addEventListener('click', function () {
-        var filter = btn.getAttribute('data-filter');
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
 
-        buttons.forEach(function (b) {
+        buttons.forEach((b) => {
           b.classList.remove('is-active');
           b.setAttribute('aria-pressed', 'false');
         });
         btn.classList.add('is-active');
         btn.setAttribute('aria-pressed', 'true');
 
-        cards.forEach(function (card) {
-          var category = card.getAttribute('data-category');
+        cards.forEach((card) => {
+          const category = card.getAttribute('data-category');
           card.hidden = !(filter === 'all' || category === filter);
         });
       });
@@ -34,11 +32,11 @@
 
   // T13: Newsletter form — prevent default, validate, show confirmation
   function initNewsletterForm() {
-    var form = document.getElementById('mfss-newsletter-form');
-    var confirmation = document.getElementById('mfss-newsletter-confirmation');
+    const form = document.getElementById('mfss-newsletter-form');
+    const confirmation = document.getElementById('mfss-newsletter-confirmation');
     if (!form || !confirmation) return;
 
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('submit', (event) => {
       event.preventDefault();
 
       if (!form.checkValidity()) {
@@ -56,27 +54,31 @@
 
   // T14: Back-to-top — appear after 400px scroll, smooth scroll to top
   function initBackToTop() {
-    var btn = document.getElementById('mfss-back-to-top');
+    const btn = document.getElementById('mfss-back-to-top');
     if (!btn) return;
 
-    var threshold = 400;
-    var ticking = false;
+    const threshold = 400;
+    let ticking = false;
 
     function onScroll() {
       btn.hidden = window.pageYOffset <= threshold;
     }
 
-    window.addEventListener('scroll', function () {
-      if (!ticking) {
-        window.requestAnimationFrame(function () {
-          onScroll();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            onScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
 
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
@@ -84,7 +86,7 @@
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', () => {
       initEventFilter();
       initNewsletterForm();
       initBackToTop();
@@ -94,5 +96,4 @@
     initNewsletterForm();
     initBackToTop();
   }
-
-}());
+})();

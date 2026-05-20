@@ -5,9 +5,13 @@
   "private": true,
   "scripts": {
     "build": "sass assets/sass/main.scss assets/css/main.css --style=compressed --no-source-map",
-    "watch": "sass --watch assets/sass/main.scss assets/css/main.css --style=expanded"
+    "watch": "sass --watch assets/sass/main.scss assets/css/main.css --style=expanded",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check --write ."
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.15",
     "sass": "^1.77.0"
   }
 }
