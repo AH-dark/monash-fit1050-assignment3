@@ -9,11 +9,11 @@
 }
 
 .mfss-card-grid--4 {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .mfss-card-grid--3 {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 // Base card
@@ -22,6 +22,7 @@
   border: 1px solid $mfss-grey-100;
   border-radius: 10px;
   padding: 2rem;
+  min-width: 0;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
@@ -58,16 +59,26 @@
 // Icon container for activities cards
 .mfss-card-icon {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 
-  .icon {
-    font-size: 2.5rem;
+  .icon.major {
+    margin: 0;
+    padding: 0.45rem;
     color: $mfss-teal;
+
+    &:before {
+      font-size: 3.75rem;
+      width: 2.4em;
+      height: 2.4em;
+      line-height: 2.35em;
+    }
   }
 }
 
 // Event-specific styles
 .mfss-event {
+  display: flex;
+  flex-direction: column;
   text-align: left;
   padding-top: 0;
   overflow: hidden;
@@ -82,6 +93,12 @@
   }
 
   p { text-align: left; }
+
+  .actions {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-top: 1.25rem;
+  }
 }
 
 .mfss-event-tag {
@@ -127,4 +144,43 @@
   letter-spacing: 0.1em;
   color: $mfss-teal;
   margin: 0 0 0.5rem;
+}
+
+@include breakpoint('<=large') {
+  .mfss-card-grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mfss-card-grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .mfss-card-icon {
+    .icon.major:before {
+      font-size: 3.25rem;
+    }
+  }
+}
+
+@include breakpoint('<=medium') {
+  .mfss-card-grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@include breakpoint('<=small') {
+  .mfss-card-grid,
+  .mfss-card-grid--4,
+  .mfss-card-grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .mfss-card {
+    padding: 1.5rem;
+
+    img {
+      width: calc(100% + 3rem);
+      margin: -1.5rem -1.5rem 1.25rem;
+    }
+  }
 }
