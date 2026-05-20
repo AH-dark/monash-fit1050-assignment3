@@ -2,7 +2,7 @@
 
 A fictionalised homepage for a student science society, built on the HTML5 UP **Stellar** template.
 
-**Hosted URL**: [TO BE FILLED AFTER DEPLOYMENT]
+**Hosted URL**: https://ah-dark.github.io/monash-fit1050-assignment3/
 
 ## About This Project
 

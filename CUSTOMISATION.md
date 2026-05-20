@@ -7,7 +7,7 @@ This document enumerates every customisation made to the base HTML5 UP Stellar t
 | Metric | Value |
 |--------|-------|
 | Template | HTML5 UP Stellar (CCA 3.0) |
-| Hosted URL | [filled after deployment] |
+| Hosted URL | https://ah-dark.github.io/monash-fit1050-assignment3/ |
 | HTML validation | 0 errors, 1 warning (viewport info) — see `validation-report.json`, run 2026-05-20 |
 | Folder size | 4.4 MB (limit 25 MB) |
 | Sections | 6 (Hero, About, Activities, Events, Team, Join) |
