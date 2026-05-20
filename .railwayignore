@@ -1,0 +1,8 @@
+node_modules/
+.git/
+.sisyphus/
+screenshots/
+*.log
+*.zip
+.DS_Store
+*.md
