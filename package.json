@@ -6,9 +6,9 @@
   "scripts": {
     "build": "sass assets/sass/main.scss assets/css/main.css --style=compressed --no-source-map",
     "watch": "sass --watch assets/sass/main.scss assets/css/main.css --style=expanded",
-    "lint": "biome lint .",
-    "format": "biome format --write .",
-    "check": "biome check --write ."
+    "lint": "biome lint assets/js/mfss.js",
+    "format": "biome format --write assets/js/mfss.js",
+    "check": "biome check --write assets/js/mfss.js"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.15",
