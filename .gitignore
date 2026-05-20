@@ -1,6 +1,4 @@
-/.sisyphus/
-/.vscode/
-/.idea/
-
+node_modules/
+*.log
 .DS_Store
-Thumbs.db
+.sisyphus/evidence/
