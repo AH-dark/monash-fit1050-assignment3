@@ -1,9 +1,8 @@
 // assets/js/mfss.js
 // MFSS-specific interactions: event filter, newsletter form, back-to-top.
-// Vanilla JS only. No external dependencies.
 
 (() => {
-  // T12: Event filter — show/hide event cards by category
+  // Event filter — show/hide event cards by category
   function initEventFilter() {
     const buttons = document.querySelectorAll('.mfss-filter-btn');
     const cards = document.querySelectorAll('.mfss-event');
@@ -52,7 +51,7 @@
     });
   }
 
-  // T14: Back-to-top — appear after 400px scroll, smooth scroll to top
+  // Back-to-top — appear after 400px scroll, smooth scroll to top
   function initBackToTop() {
     const btn = document.getElementById('mfss-back-to-top');
     if (!btn) return;
