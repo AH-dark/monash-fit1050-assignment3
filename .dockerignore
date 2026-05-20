@@ -1,5 +1,6 @@
+.git/
+.sisyphus/
 node_modules/
 *.log
 .DS_Store
-.sisyphus/evidence/
 assets/css/main.css

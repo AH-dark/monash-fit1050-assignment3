@@ -122,12 +122,33 @@
 
   input[type="text"],
   input[type="email"] {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.3);
-    color: #ffffff;
+    background: #ffffff;
+    border-color: rgba(94, 234, 212, 0.75);
+    color: $mfss-navy;
+    box-shadow: 0 12px 28px rgba(6, 21, 54, 0.24);
 
-    &::placeholder { color: rgba(255, 255, 255, 0.65); }
-    &:focus { border-color: $mfss-teal; outline: none; }
+    &::placeholder { color: rgba(10, 31, 68, 0.55); }
+    &:focus {
+      border-color: $mfss-teal-light;
+      box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.35), 0 12px 28px rgba(6, 21, 54, 0.24);
+      outline: none;
+    }
+  }
+
+  input[type="submit"].primary {
+    background: $mfss-teal-light;
+    color: $mfss-navy !important;
+    box-shadow: 0 12px 28px rgba(20, 184, 166, 0.28);
+    font-weight: 700;
+
+    &:hover,
+    &:focus-visible {
+      background: #ffffff;
+      color: $mfss-navy !important;
+      box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.35), 0 12px 28px rgba(20, 184, 166, 0.28);
+    }
+
+    &:active { background: $mfss-grey-100; }
   }
 }
 
