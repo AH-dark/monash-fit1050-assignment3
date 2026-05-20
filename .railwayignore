@@ -5,3 +5,4 @@ screenshots/
 *.log
 *.zip
 .DS_Store
+*.md
