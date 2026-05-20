@@ -1,0 +1,13 @@
+{
+  "name": "monash-fit1050-assignment3",
+  "version": "1.0.0",
+  "description": "FIT1050 Assignment 3 — Monash Future Science Society (fictional homepage). Built on HTML5 UP Stellar.",
+  "private": true,
+  "scripts": {
+    "build": "sass assets/sass/main.scss assets/css/main.css --style=compressed --no-source-map",
+    "watch": "sass --watch assets/sass/main.scss assets/css/main.css --style=expanded"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}
