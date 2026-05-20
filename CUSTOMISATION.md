@@ -102,10 +102,5 @@ Static audit results (see `.sisyphus/evidence/task-18-a11y-audit.md`):
 
 ## Screenshots
 
-Side-by-side comparison (original Stellar vs MFSS redesign):
-
-- Full-page redesign: `screenshots/mfss-redesign.png` (1920×1080)
-- Above-fold: `screenshots/mfss-redesign-fold.png`
-- Event filter active (Social): `screenshots/feature-filter.png`
-- Newsletter confirmation: `screenshots/feature-newsletter.png`
-- Back-to-top button: `screenshots/feature-back-to-top.png`
+Screenshots are generated locally and embedded directly into the report PDF;
+they are not tracked in this repository.
