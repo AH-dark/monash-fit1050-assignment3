@@ -19,42 +19,55 @@
 
 // Font.
 	$font: (
-		family:				('Source Sans Pro', Helvetica, sans-serif),
+		family:				('Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif),
+		family-heading:		('Fraunces', Georgia, 'Times New Roman', serif),
 		family-fixed:		('Courier New', monospace),
-		weight:				300,
-		weight-bold:		400,
-		letter-spacing:		-0.025em
+		weight:				400,
+		weight-bold:		600,
+		letter-spacing:		-0.01em
 	);
 
 // Palette.
 	$palette: (
-		bg:					#935d8c,
-		fg:					rgba(255,255,255,0.65),
+		bg:					#0A1F44,
+		fg:					rgba(255,255,255,0.85),
 		fg-bold:			#ffffff,
 		fg-light:			rgba(255,255,255,0.5),
-		border:				rgba(255,255,255,0.35),
-		border-bg:			rgba(255,255,255,0.075),
-		border2:			rgba(255,255,255,0.75),
-		border2-bg:			rgba(255,255,255,0.2),
+		border:				rgba(255,255,255,0.2),
+		border-bg:			rgba(255,255,255,0.05),
+		border2:			rgba(255,255,255,0.6),
+		border2-bg:			rgba(255,255,255,0.15),
 
 		invert: (
 			bg:				#ffffff,
-			bg-alt:			#f7f7f7,
-			fg:				#636363,
-			fg-bold:		#636363,
-			fg-light:		rgba(99,99,99,0.25),
-			border:			#dddddd,
-			border-bg:		rgba(222,222,222,0.25),
-			border2:		#dddddd,
-			border2-bg:		rgba(222,222,222,0.5),
+			bg-alt:			#F8FAFC,
+			fg:				#1F2937,
+			fg-bold:		#0A1F44,
+			fg-light:		rgba(31,41,55,0.35),
+			border:			#E5E7EB,
+			border-bg:		rgba(229,231,235,0.25),
+			border2:		#E5E7EB,
+			border2-bg:		rgba(229,231,235,0.5),
 		),
 
-		accent:				#8cc9f0,
-		accent1:			#efa8b0,
-		accent2:			#c79cc8,
-		accent3:			#a89cc8,
-		accent4:			#9bb2e1,
-		accent5:			#8cc9f0,
-		bg1:				#e37682,
-		bg2:				#5f4d93
+		accent:				#14B8A6,
+		accent1:			#5EEAD4,
+		accent2:			#0A1F44,
+		accent3:			#061536,
+		accent4:			#14B8A6,
+		accent5:			#5EEAD4,
+		bg1:				#0A1F44,
+		bg2:				#061536
 	);
+
+// MFSS custom palette variables
+// FIT1050 Assignment 3 — Monash Future Science Society
+// Primary: deep navy; Accent: teal; Background: white/light grey
+$mfss-navy:        #0A1F44;
+$mfss-navy-deep:   #061536;
+$mfss-teal:        #14B8A6;
+$mfss-teal-light:  #5EEAD4;
+$mfss-grey-50:     #F8FAFC;
+$mfss-grey-100:    #E5E7EB;
+$mfss-grey-700:    #1F2937;
+$mfss-white:       #FFFFFF;

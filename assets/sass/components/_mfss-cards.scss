@@ -1,0 +1,130 @@
+// MFSS Card Grids — What We Do, Events, Team
+// FIT1050 Assignment 3
+
+// Base grid container
+.mfss-card-grid {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.mfss-card-grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mfss-card-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+// Base card
+.mfss-card {
+  background: #ffffff;
+  border: 1px solid $mfss-grey-100;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(10, 31, 68, 0.12);
+  }
+
+  h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $mfss-navy;
+    margin: 0.75rem 0 0.5rem;
+  }
+
+  p {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: $mfss-grey-700;
+    margin: 0;
+  }
+
+  img {
+    width: calc(100% + 4rem);
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    margin: -2rem -2rem 1.5rem;
+  }
+}
+
+// Icon container for activities cards
+.mfss-card-icon {
+  display: block;
+  margin-bottom: 1rem;
+
+  .icon {
+    font-size: 2.5rem;
+    color: $mfss-teal;
+  }
+}
+
+// Event-specific styles
+.mfss-event {
+  text-align: left;
+  padding-top: 0;
+  overflow: hidden;
+
+  img {
+    border-radius: 8px 8px 0 0;
+  }
+
+  h3 {
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  p { text-align: left; }
+}
+
+.mfss-event-tag {
+  display: inline-block;
+  background: $mfss-teal;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.mfss-event-when {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $mfss-teal;
+  margin: 0.25rem 0 0.5rem;
+}
+
+// Team member cards
+.mfss-member {
+  img {
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem !important;
+    display: block;
+    border: 3px solid $mfss-teal;
+  }
+}
+
+.mfss-role {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $mfss-teal;
+  margin: 0 0 0.5rem;
+}

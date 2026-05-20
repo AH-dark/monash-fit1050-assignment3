@@ -1,0 +1,60 @@
+// MFSS Hero, Nav, and Footer overrides
+// FIT1050 Assignment 3
+
+// Hero section
+.mfss-hero {
+  background-color: $mfss-navy;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 6rem 0 4rem;
+
+  .major h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+}
+
+.mfss-lead {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.65;
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+}
+
+// Nav teal accent override
+#nav {
+  a {
+    &:hover,
+    &.active {
+      color: $mfss-teal;
+      border-bottom-color: $mfss-teal;
+    }
+  }
+}
+
+// Footer navy background
+#footer {
+  background-color: $mfss-navy-deep;
+  color: rgba(255, 255, 255, 0.7);
+
+  h2, h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    color: #ffffff;
+  }
+
+  a {
+    color: $mfss-teal;
+    &:hover { color: $mfss-teal-light; }
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.45);
+    a { color: rgba(255, 255, 255, 0.6); }
+  }
+}

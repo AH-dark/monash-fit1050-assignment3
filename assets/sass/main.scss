@@ -60,6 +60,7 @@
 	@import 'components/features';
 	@import 'components/statistics';
 	@import 'components/spotlight';
+	@import 'components/mfss-cards';
 
 // Layout.
 
@@ -68,3 +69,5 @@
 	@import 'layout/main';
 	@import 'layout/footer';
 	@import 'layout/wrapper';
+	@import 'components/mfss-hero';
+	@import 'components/mfss-sections';

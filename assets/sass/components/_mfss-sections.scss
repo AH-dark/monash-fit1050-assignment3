@@ -1,0 +1,157 @@
+// MFSS Section-specific styles: About, Events filter, Join form, Back-to-top
+// FIT1050 Assignment 3
+
+// About section — two-column grid
+.mfss-about {
+  background: $mfss-grey-50;
+}
+
+.mfss-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.mfss-about-copy {
+  p {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: $mfss-grey-700;
+    margin-bottom: 1rem;
+  }
+}
+
+.mfss-about-image {
+  img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(10, 31, 68, 0.15);
+  }
+}
+
+// Events filter buttons
+.mfss-filter {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.mfss-filter-btn {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid $mfss-navy;
+  border-radius: 999px;
+  background: transparent;
+  color: $mfss-navy;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: $mfss-navy;
+    color: #ffffff;
+    outline: 2px solid $mfss-teal;
+    outline-offset: 2px;
+  }
+
+  &.is-active {
+    background: $mfss-teal;
+    border-color: $mfss-teal;
+    color: #ffffff;
+  }
+}
+
+// Join section — dark navy background
+.mfss-join {
+  background: $mfss-navy;
+  color: rgba(255, 255, 255, 0.85);
+
+  .major h2 {
+    color: #ffffff;
+    font-family: 'Fraunces', Georgia, serif;
+  }
+
+  .major p {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  label {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+
+    &::placeholder { color: rgba(255, 255, 255, 0.4); }
+    &:focus { border-color: $mfss-teal; outline: none; }
+  }
+}
+
+// Newsletter confirmation message
+.mfss-confirmation {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  background: $mfss-teal;
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  text-align: center;
+
+  &[hidden] { display: none; }
+}
+
+// Contact list in Join section
+.mfss-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+
+  a { color: $mfss-teal-light; }
+}
+
+// Back-to-top button
+#mfss-back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: $mfss-teal;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 16px rgba(20, 184, 166, 0.4);
+  transition: background 0.15s ease, transform 0.15s ease;
+  z-index: 9999;
+
+  &:hover { background: $mfss-teal-light; transform: translateY(-2px); }
+  &[hidden] { display: none; }
+}
