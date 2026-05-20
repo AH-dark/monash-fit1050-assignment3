@@ -29,7 +29,7 @@
     });
   }
 
-  // T13: Newsletter form — prevent default, validate, show confirmation
+  // Newsletter form — prevent default, validate, show confirmation
   function initNewsletterForm() {
     const form = document.getElementById('mfss-newsletter-form');
     const confirmation = document.getElementById('mfss-newsletter-confirmation');
