@@ -1,0 +1,17 @@
+{
+  "version": "26.5.19",
+  "messages": [
+    {
+      "type": "info",
+      "lastLine": 5,
+      "lastColumn": 90,
+      "firstColumn": 5,
+      "subType": "warning",
+      "message": "Consider avoiding viewport values that prevent users from resizing documents.",
+      "extract": "f-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no\">\n    <",
+      "hiliteStart": 10,
+      "hiliteLength": 86
+    }
+  ],
+  "language": "en"
+}
