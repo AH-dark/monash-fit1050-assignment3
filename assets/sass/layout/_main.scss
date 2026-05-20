@@ -7,7 +7,16 @@
 /* Main */
 
 	#main {
-		@include color(invert);
+		// MFSS override: Stellar applies invert palette (navy text on white) to all of #main,
+		// which breaks dark sections (.mfss-hero, .mfss-join) where text needs to be white on navy.
+		// Apply invert only to light sections; dark sections inherit the default (dark) palette
+		// from the global color-* mixins emitted at the bottom of each component file.
+		> .mfss-about,
+		> .mfss-activities,
+		> .mfss-events,
+		> .mfss-team {
+			@include color(invert);
+		}
 		border-radius: _size(border-radius-main);
 
 		> .main {

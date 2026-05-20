@@ -83,6 +83,10 @@
   padding-top: 0;
   overflow: hidden;
 
+  // display:flex overrides [hidden]'s UA default of display:none.
+  // Restore hidden behaviour so the JS filter actually hides cards.
+  &[hidden] { display: none; }
+
   img {
     border-radius: 8px 8px 0 0;
   }
@@ -111,7 +115,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   padding: 0.25rem 0.6rem;
-  border-radius: 4px;
+  border-radius: 999px;
   margin-top: 1rem;
 }
 
